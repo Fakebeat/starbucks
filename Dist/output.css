@@ -731,13 +731,113 @@ video {
   transition-duration: 150ms;
 }
 
+/* .kalbo{
+        @apply bg-puti
+    }
+    .kalbo__wrapper{
+        @apply bg-gray-600 py-[2rem]
+    }
+    .kalbo__nav{
+        @apply max-w-[25rem] flex flex-wrap gap-[2rem] mx-auto justify-center
+    }
+    .kalbo__nav li{
+        @apply p-[.5rem] rounded-md text-puti
+    }
+    .kalbo__nav li.active{
+        @apply bg-blue-700 text-puti
+    }
+    .kalbo__item__content{
+        @apply hidden
+    }
+    .kalbo__item__content img{
+        @apply w-[10rem] rounded-full h-[auto] bg-lasalle px-[1rem]
+    }
+    .kalbo__item__content.active{
+        @apply flex gap-[2rem] items-center justify-center
+    }
+    .kalbo__desc__wrapper{
+        @apply bg-gray-300 p-[2rem]
+    }
+    .kalbo__text h2{
+        @apply text-[1.5rem] mb-[2rem]
+    }
+    .kalbo__text table tr{
+        @apply h-[5rem] flex flex-col
+    }
+    .kalbo__text table tr td:first-child{
+        @apply font-semibold
+    } */
+
+.coffee .container h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.coffee__wrapper ul {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 540px;
+  gap: 2.25rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.coffee__sample__item {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.coffee__sample {
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .coffee__sample {
+    display: flex;
+  }
+}
+
+.coffee__sample h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.coffee__sample p {
+  font-size: .9rem;
+}
+
+.coffee__sample img {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 540px;
+  align-items: center;
+}
+
+.table {
+  display: table;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .container{
   max-width:90rem;
   padding:1.5rem;
   margin:0 auto;
 }
 
-.btn {
+.btn{
   background-color: transparent;
   padding: 0.2rem 1rem;
   border-radius: 3rem;

@@ -7,7 +7,7 @@
     padding:1.5rem;
     margin:0 auto;
 }
-.btn {
+.btn{
       background-color: transparent;
       padding: 0.2rem 1rem;
       border-radius: 3rem;
@@ -29,6 +29,7 @@
     .btn.bg--itim:hover {
       background-color: hsl(240, 1.51%, 20%);
     }
+
 
 @layer components{
     .header{
@@ -86,5 +87,68 @@
     }
     .buhok.open{
         @apply opacity-[.5]  transition-all
+    }
+
+
+    
+    /* .kalbo{
+        @apply bg-puti
+    }
+    .kalbo__wrapper{
+        @apply bg-gray-600 py-[2rem]
+    }
+    .kalbo__nav{
+        @apply max-w-[25rem] flex flex-wrap gap-[2rem] mx-auto justify-center
+    }
+    .kalbo__nav li{
+        @apply p-[.5rem] rounded-md text-puti
+    }
+    .kalbo__nav li.active{
+        @apply bg-blue-700 text-puti
+    }
+    .kalbo__item__content{
+        @apply hidden
+    }
+    .kalbo__item__content img{
+        @apply w-[10rem] rounded-full h-[auto] bg-lasalle px-[1rem]
+    }
+    .kalbo__item__content.active{
+        @apply flex gap-[2rem] items-center justify-center
+    }
+    .kalbo__desc__wrapper{
+        @apply bg-gray-300 p-[2rem]
+    }
+    .kalbo__text h2{
+        @apply text-[1.5rem] mb-[2rem]
+    }
+    .kalbo__text table tr{
+        @apply h-[5rem] flex flex-col
+    }
+    .kalbo__text table tr td:first-child{
+        @apply font-semibold
+    } */
+
+
+    
+    .coffee .container h1{
+        @apply text-center text-[2rem] font-bold mb-[2rem]
+    }
+    .coffee__wrapper ul{
+        @apply gap-9 flex font-semibold text-[1.3rem] max-w-[540px] mx-auto
+    }
+    .coffee__sample__item{
+        @apply bg-blue-500 
+    }
+    .coffee__sample{
+        @apply text-center font-semibold lg:flex justify-center
+    }
+    .coffee__sample h3{
+        @apply text-[1.3rem] mb-[1rem]
+    }
+    .coffee__sample p{
+        @apply text-[.9rem] 
+    }
+    .coffee__sample img{
+        @apply flex items-center max-w-[540px] mx-auto
     }
 }
