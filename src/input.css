@@ -29,6 +29,26 @@
     .btn.bg--itim:hover {
       background-color: hsl(240, 1.51%, 20%);
     }
+    .btn.bg-lasalle {
+        background: #1E3932;
+        color:#ffffff;
+        border:1px solid #ffffff;
+      }
+      .btn.bg-lasalle:hover {
+        background-color: #006341;
+      }
+    .bilog{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        background: #fff;
+        border: 3px solid green;
+        color: #000;
+        text-align: center;
+        font: 32px Arial, sans-serif;
+        
+    }
 
 
 @layer components{
@@ -82,16 +102,13 @@
     .toggle__menu span{
         @apply w-[2rem] h-[.2rem] bg-semento block rounded-full
     }
-    .buhok{
-        @apply h-[100vh] w-[100%] bg-black absolute z-[999] top-[5.6rem] left-[0] opacity-0 transition-all
-    }
     .buhok.open{
-        @apply opacity-[.5]  transition-all
+        @apply h-[100vh] w-[100%] bg-black absolute z-[999] top-[5.6rem] left-[0] opacity-[.5] transition-all
     }
-
-
     
-    /* .kalbo{
+
+
+    .kalbo{
         @apply bg-puti
     }
     .kalbo__wrapper{
@@ -126,21 +143,73 @@
     }
     .kalbo__text table tr td:first-child{
         @apply font-semibold
-    } */
+    }
 
+
+    /*---BANNER---*/
+    .banner{
+        background-image:url("../img/rewards/star.png");
+        background-size:cover;
+        background-color:#D0EAE4;
+        background-position-y:13rem;
+        background-repeat:no-repeat;
+        height:550px;
+        text-align:center;
+        @media screen and (min-width:1024px){
+            background-position-y:5rem;
+            background-size:contain;
+            background-position-x:45rem;
+            height:800px;
+            text-align:unset;
+            display:flex;
+            align-items:center;
+        }
+    }
+    .banner__wrapper{
+        @apply flex flex-col max-w-[15rem] gap-[2rem] items-center
+    }
+    .banner__wrapper h1{
+        @apply text-[2rem] font-bold
+    }
+
+
+    /*---REWARD---*/
+    .reward__wrapper{
+        @apply text-center
+    }
+    .reward__wrapper h1{
+        @apply text-[1.5rem] font-semibold
+    }
+    .reward__text{
+        @apply text-left
+   
+    }
 
     
     .coffee .container h1{
         @apply text-center text-[2rem] font-bold mb-[2rem]
     }
     .coffee__wrapper ul{
-        @apply gap-9 flex font-semibold text-[1.3rem] max-w-[540px] mx-auto
+        @apply flex font-semibold text-[1.3rem] mx-auto justify-center
+    }
+    .coffee__wrapper li{
+        @apply px-[1rem] p-[1.5rem] relative
+    }
+    .coffee__wrapper li:after{
+        @apply content-[''] w-0 h-[3px] bg-red-600 block absolute bottom-0 left-0 origin-bottom-left ease-in duration-[.1s]
+    }
+    .coffee__wrapper li.active:after{
+        @apply w-full transition-all
     }
     .coffee__sample__item{
-        @apply bg-blue-500 
+        @apply bg-blue-500 h-[400px]
     }
     .coffee__sample{
-        @apply text-center font-semibold lg:flex justify-center
+        @apply text-center font-semibold lg:flex justify-center absolute top-[4rem] opacity-0 ease-in duration-[.5s]
+        lg:flex lg:items-center lg:max-[60rem] lg:static lg:mx-auto
+    }
+    .coffee__sample.active{
+        @apply opacity-[1] top-0 ease-in duration-[.5s]
     }
     .coffee__sample h3{
         @apply text-[1.3rem] mb-[1rem]
@@ -151,4 +220,6 @@
     .coffee__sample img{
         @apply flex items-center max-w-[540px] mx-auto
     }
+    
+
 }
