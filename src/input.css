@@ -6,6 +6,7 @@
     max-width:90rem;
     padding:1.5rem;
     margin:0 auto;
+    
 }
 .btn{
       background-color: transparent;
@@ -39,11 +40,11 @@
       }
     .bilog{
         border-radius: 50%;
-        width: 50px;
+        width: 75px;
         height: 50px;
         padding: 5px;
         background: #fff;
-        border: 3px solid green;
+        border: 2px solid green;
         color: #000;
         text-align: center;
         font: 32px Arial, sans-serif;
@@ -166,27 +167,121 @@
         }
     }
     .banner__wrapper{
-        @apply flex flex-col max-w-[15rem] gap-[2rem] items-center
+        @apply flex flex-col max-w-[20rem] gap-[1rem] items-center mx-[auto]
     }
     .banner__wrapper h1{
         @apply text-[2rem] font-bold
+    }.banner__wrapper span{
+        @apply hidden lg:block
     }
-
+    .banner .container a:last-child{ 
+        @apply underline lg:hidden
+    }
+    
 
     /*---REWARD---*/
     .reward__wrapper{
-        @apply text-center
+        @apply text-center 
     }
-    .reward__wrapper h1{
-        @apply text-[1.5rem] font-semibold
+    .reward__title h1{
+        @apply text-[1.7rem] font-semibold py-[1rem]
+    }
+    .reward__title{
+        @apply p-[2rem]
     }
     .reward__text{
-        @apply text-left
-   
+        @apply flex gap-[1rem] items-center py-2 lg:flex-col lg:text-center lg:max-w-[350px] lg:mx-auto
+    }
+    .reward__text h2{
+        @apply text-[1.1rem] font-bold py-[1rem]
+    }
+    .reward__text p{
+        @apply font-semibold
+    }
+    .reward__item{
+        @apply lg:flex lg:py-[5rem]
     }
 
+  
+
     
-    .coffee .container h1{
+    /*COFFEE--*/
+    .coffee__wrapper{
+        @apply bg-lblue text-center py-[2rem]
+    }
+    .coffee__wrapper h1{
+        @apply text-[2rem] font-[600]
+    }
+    .coffee__wrapper li{
+        @apply relative
+    }
+    .coffee__wrapper li:after{
+        @apply content-[''] w-0 h-[3px] bg-lasalle block absolute bottom-0 left-0 origin-bottom-left ease-in duration-[.1s]
+    }
+    .coffee__wrapper li.active:after{
+        @apply w-full transition-all
+    }
+    .coffee__nav ul{
+        @apply max-w-[25rem] flex gap-[2rem] mx-auto justify-center font-[600] text-[1.3em]
+    }
+    /* .coffee__sample{
+        @apply text-center font-semibold justify-center absolute top-[4rem] opacity-0 ease-in duration-[.5s]
+        lg:flex lg:items-center  lg:static lg:mx-auto
+    } */
+    .coffee__sample__item{
+        @apply bg-semiblue 
+    }
+    .coffee__text{
+        @apply text-center p-[1rem]
+    }
+    .coffee__text h3{
+        @apply text-[1.2rem] font-[600] py-[1rem]
+    }
+
+
+    /*---EXTRA'S---*/
+    .extra__wrapper{
+        @apply text-center p-[2rem] lg:w-[100%] lg:justify-center lg:max-w-[750px] lg:mx-auto
+    }
+    .extra__wrapper h1{
+        @apply text-[1.7rem] font-semibold py-[1rem]
+    }
+    .extra__wrapper p{
+        @apply lg:font-semibold my-[1rem]
+    }
+    .extra__text{
+        @apply flex gap-[1rem] lg:items-center py-2  lg:flex-col lg:text-center  lg:max-w-[400px] lg:mx-auto
+    }
+    .extra__text img{
+        @apply w-[7rem] h-[7rem]
+    }
+    .extra__text h2{
+        @apply text-[1.1rem] font-bold py-[1rem] lg:text-[1.5rem]
+    }
+    .extra__text p{
+        @apply py-[1rem]  lg:font-semibold 
+    }
+    .extra__tips a{
+        @apply text-lasalle underline
+    }
+    .extra__tips a:hover{
+        @apply no-underline
+    }
+    .extra__item{
+        @apply lg:flex lg:py-[5rem]
+    }
+    .extra__title{
+        @apply lg:flex lg:py-[5rem] 
+    }
+
+
+
+
+
+
+
+
+    /* .coffee .container h1{
         @apply text-center text-[2rem] font-bold mb-[2rem]
     }
     .coffee__wrapper ul{
@@ -206,7 +301,7 @@
     }
     .coffee__sample{
         @apply text-center font-semibold lg:flex justify-center absolute top-[4rem] opacity-0 ease-in duration-[.5s]
-        lg:flex lg:items-center lg:max-[60rem] lg:static lg:mx-auto
+        lg:flex lg:items-center  lg:static lg:mx-auto
     }
     .coffee__sample.active{
         @apply opacity-[1] top-0 ease-in duration-[.5s]
@@ -219,7 +314,7 @@
     }
     .coffee__sample img{
         @apply flex items-center max-w-[540px] mx-auto
-    }
+    } */
     
 
 }
