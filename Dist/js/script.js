@@ -33,3 +33,11 @@ toggleMenu.addEventListener("click", () => {
   headerNav.classList.toggle("open");
   hair.classList.toggle("open");
 });
+
+const drop = document.querySelectorAll(".drop__wrapper .drop__text h2");
+drop.forEach((link) => {
+  link.addEventListener("click", () => {
+    link.nextElementSibling.classList.toggle("open");
+    link.querySelector("i").classList.toggle("open");
+  });
+});

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+    font-family: AbrilFatface;
+    src: url("../fonts/AbrilFatface-Regular.woff")
+}
+
 .container{
     max-width:90rem;
     padding:1.5rem;
@@ -59,6 +64,7 @@
         position:fixed;
         width:100%;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        z-index:999;
     }
     .header .container{
         @apply lg:p-[.5rem]
@@ -101,7 +107,7 @@
         @apply flex flex-col gap-[.2rem] lg:hidden
     }
     .toggle__menu span{
-        @apply w-[2rem] h-[.2rem] bg-semento block rounded-full
+        @apply w-[2rem] h-[.2rem] bg-maitim block rounded-full
     }
     .buhok.open{
         @apply h-[100vh] w-[100%] bg-black absolute z-[999] top-[5.6rem] left-[0] opacity-[.5] transition-all
@@ -167,16 +173,17 @@
         }
     }
     .banner__wrapper{
-        @apply flex flex-col max-w-[20rem] gap-[1rem] items-center mx-[auto]
+        @apply flex flex-col max-w-[20rem] gap-[1rem] items-center mx-[auto] lg:flex lg:items-start lg:mx-[10px]
     }
     .banner__wrapper h1{
-        @apply text-[2rem] font-bold
+        @apply text-[2rem] font-bold lg:text-[2.81rem] lg:max-w-[100%]
     }.banner__wrapper span{
         @apply hidden lg:block
     }
     .banner .container a:last-child{ 
         @apply underline lg:hidden
     }
+    
     
 
     /*---REWARD---*/
@@ -224,10 +231,10 @@
     .coffee__nav ul{
         @apply max-w-[25rem] flex gap-[2rem] mx-auto justify-center font-[600] text-[1.3em]
     }
-    /* .coffee__sample{
+    .coffee__sample{
         @apply text-center font-semibold justify-center absolute top-[4rem] opacity-0 ease-in duration-[.5s]
         lg:flex lg:items-center  lg:static lg:mx-auto
-    } */
+    }
     .coffee__sample__item{
         @apply bg-semiblue 
     }
@@ -238,13 +245,14 @@
         @apply text-[1.2rem] font-[600] py-[1rem]
     }
 
+    
 
     /*---EXTRA'S---*/
     .extra__wrapper{
         @apply text-center p-[2rem] lg:w-[100%] lg:justify-center lg:max-w-[750px] lg:mx-auto
     }
     .extra__wrapper h1{
-        @apply text-[1.7rem] font-semibold py-[1rem]
+        @apply text-[1.7rem] font-[650] py-[1rem]
     }
     .extra__wrapper p{
         @apply lg:font-semibold my-[1rem]
@@ -253,16 +261,16 @@
         @apply flex gap-[1rem] lg:items-center py-2  lg:flex-col lg:text-center  lg:max-w-[400px] lg:mx-auto
     }
     .extra__text img{
-        @apply w-[7rem] h-[7rem]
+        @apply w-[7rem] h-[7rem] mb-10
     }
     .extra__text h2{
-        @apply text-[1.1rem] font-bold py-[1rem] lg:text-[1.5rem]
+        @apply text-[1.1rem] font-bold lg:text-[1.5rem]
     }
     .extra__text p{
-        @apply py-[1rem]  lg:font-semibold 
+        @apply lg:font-semibold 
     }
     .extra__tips a{
-        @apply text-lasalle underline
+        @apply text-lasalle underline 
     }
     .extra__tips a:hover{
         @apply no-underline
@@ -271,10 +279,143 @@
         @apply lg:flex lg:py-[5rem]
     }
     .extra__title{
-        @apply lg:flex lg:py-[5rem] 
+        @apply lg:flex 
     }
 
 
+
+    /*---PAYMENT---*/
+  
+    .pay .container{
+        @apply bg-semento p-0 max-w-full 
+    }
+    .pay__title h1{
+        @apply text-center text-[1.5rem] font-bold mb-[1rem] pt-[3rem]
+    }
+    .pay__title p{
+        @apply text-center mb-[3rem] text-[1rem] lg:max-w-[50%] lg:mx-[auto] lg:text-[1.1rem]
+    }
+    .pay__scan__text{
+        @apply px-[1rem] mb-[2rem] 
+    }
+    .pay__scan__text h2{
+        @apply text-[1.3rem] font-bold lg:text-[1.4rem]
+    }
+    .pay__scan__text p{
+        @apply lg:text-[1rem] lg:font-semibold
+    }
+    .pay__scan__me{
+        @apply flex gap-[1.2rem] px-[1rem] pb-[2rem]
+    }
+    .pay__scan__me img{
+        @apply w-[7rem] lg:w-[8rem]
+    }
+    .pay__item h3{
+        @apply font-bold mb-5 text-[1.2rem] 
+    }
+    .pay__item p{
+        @apply text-[1rem] lg:max-w-xs lg:font-semibold
+    }
+    .pay__scan__all-1{
+        @apply lg:flex px-[0rem] lg:gap-[3rem] pb-[5rem] border-b-[2px] mx-[2rem] lg:pb-[1rem]
+    }
+    .pay__scan__all-2{
+        @apply lg:flex px-[2rem] lg:gap-[3rem] pt-[5rem]
+    }
+
+
+
+    /*---TALA---*/
+    .tala{
+        @apply lg:bg-tala
+    }
+    .tala__wrapper{
+        @apply lg:flex  lg:items-center justify-center 
+    }
+    .tala__wrapper img{
+        @apply hidden
+    }
+
+
+    /*---DOCS---*/
+    .docs{
+        @apply border-b-2
+    }
+    .docs .container{
+        @apply p-0 max-w-full 
+    }
+    .docs__wrapper span{
+        @apply text-lasalle underline
+    }
+    .docs__title{ 
+        @apply mb-[5rem] px-[1rem] pt-[2rem] lg:mx-[15rem] lg:mt-5 lg:mb-[5rem]
+    }
+    .docs__title h2{
+        @apply text-[1.7rem] font-[600] mb-[1rem] 
+    }
+    .docs__title p{
+        @apply text-[.95rem] font-[500] lg:max-w-[75%] lg:text-[1rem] lg:font-[500]
+    }
+    .docs__text{
+        @apply bg-semento px-[1rem] lg:px-[2rem] pt-[2rem]
+    }
+    .docs__text p{
+        @apply lg:max-w-[75%]
+    }
+    .docs__all__item-1{
+        @apply  bg-semento px-[1rem] pt-[1rem] lg:grid lg:grid-cols-2 lg:px-[2rem]
+    }
+    .docs__all__item-1 h2{
+        @apply mb-[1rem] text-gray-600 font-bold lg:font-bold
+    }
+    .docs__all__item-1 p{
+        @apply mb-[1rem] text-[.9rem] lg:max-w-[90%]
+    }
+    .docs__all__item-2{
+        @apply  bg-semento px-[1rem] pt-[1rem] lg:grid lg:grid-cols-2 lg:px-[2rem] pb-[2rem]
+    }
+    .docs__all__item-2 h2{
+        @apply mb-[1rem] text-gray-600 font-bold lg:font-bold
+    }
+    .docs__all__item-2 p{
+        @apply mb-[1rem] text-[.9rem] lg:max-w-[100%] 
+    }
+
+
+    
+    
+   
+
+
+    /*---DROP---*/
+    .drop__text h2{
+        @apply text-[1.2rem] font-semibold flex justify-between items-center mb-[2.5rem] cursor-pointer
+    }
+    .drop__text i{
+        @apply rounded-full p-3 lg:hidden
+    }
+    .drop__text i.open{
+        @apply rotate-180 transition-[-5s]
+    }
+    .drop__text i:hover{
+        @apply bg-gray-300
+    }
+    .drop__items{
+        @apply max-h-0 overflow-hidden lg:max-h-full
+    }
+    .drop__items li{
+        @apply mb-[2rem] text-gray-600 max-w-[200px] lg:text-[1.1rem]
+    }
+    .drop__items li:hover{
+        @apply text-black
+    }
+    .drop__items.open{
+        @apply max-h-full transition-[.5ease]
+    }
+    .drop__wrapper{
+        @apply lg:flex lg:gap-[3rem]
+    }
+   
 
 
 

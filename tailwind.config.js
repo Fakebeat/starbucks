@@ -7,12 +7,13 @@ module.exports = {
             'puti':'#ffffff',
             'maitim':'#2b2b2b',
             'lasalle':'#008248',
-            'semento':'hsl(240,1.51%,50.98%)',
+            'semento':'#f3f1e7',
             'lblue':'#f1f8f6',
             'semiblue':'#d4e9e2'
            },
            backgroundImage:{
-            'star':"url('../img/rewards/star.png')"
+            'star':"url('../img/rewards/star.png')",
+            'tala':"url('../img/rewards/bg.webp')"
            },
     },
   },
