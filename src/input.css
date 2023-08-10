@@ -39,10 +39,15 @@
         background: #1E3932;
         color:#ffffff;
         border:1px solid #ffffff;
-      }
-      .btn.bg-lasalle:hover {
-        background-color: #006341;
-      }
+    }
+    .btn.bg-lasalle:hover {
+      background-color: #006341;
+    }
+    .btn.bg-tagos {
+        color:#black;
+        border:1px solid black;
+    }
+   
     .bilog{
         border-radius: 50%;
         width: 75px;
@@ -55,6 +60,7 @@
         font: 32px Arial, sans-serif;
         
     }
+
 
 
 @layer components{
@@ -112,45 +118,7 @@
     .buhok.open{
         @apply h-[100vh] w-[100%] bg-black absolute z-[999] top-[5.6rem] left-[0] opacity-[.5] transition-all
     }
-    
 
-
-    .kalbo{
-        @apply bg-puti
-    }
-    .kalbo__wrapper{
-        @apply bg-gray-600 py-[2rem]
-    }
-    .kalbo__nav{
-        @apply max-w-[25rem] flex flex-wrap gap-[2rem] mx-auto justify-center
-    }
-    .kalbo__nav li{
-        @apply p-[.5rem] rounded-md text-puti
-    }
-    .kalbo__nav li.active{
-        @apply bg-blue-700 text-puti
-    }
-    .kalbo__item__content{
-        @apply hidden
-    }
-    .kalbo__item__content img{
-        @apply w-[10rem] rounded-full h-[auto] bg-lasalle px-[1rem]
-    }
-    .kalbo__item__content.active{
-        @apply flex gap-[2rem] items-center justify-center
-    }
-    .kalbo__desc__wrapper{
-        @apply bg-gray-300 p-[2rem]
-    }
-    .kalbo__text h2{
-        @apply text-[1.5rem] mb-[2rem]
-    }
-    .kalbo__text table tr{
-        @apply h-[5rem] flex flex-col
-    }
-    .kalbo__text table tr td:first-child{
-        @apply font-semibold
-    }
 
 
     /*---BANNER---*/
@@ -209,24 +177,44 @@
         @apply lg:flex lg:py-[5rem]
     }
 
-  
 
     
     /*COFFEE--*/
     .coffee__wrapper{
-        @apply bg-lblue text-center py-[2rem]
+        @apply bg-lblue text-center py-[1rem]
     }
     .coffee__wrapper h1{
         @apply text-[2rem] font-[600]
     }
-    .coffee__wrapper li{
-        @apply relative
+    .coffee__sample__item{
+        @apply bg-semiblue h-[450px] lg:h-[300px] relative 
     }
-    .coffee__wrapper li:after{
+    .coffee__text{
+        @apply text-center p-[1rem] 
+    }
+    .coffee__text h3{
+        @apply text-[1.2rem] font-[600] py-[1rem] 
+    }
+    .coffee__sample__content{
+        @apply p-[1.5rem] absolute top-[4rem] opacity-0 ease-in duration-300 lg:flex lg:items-center lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:max-w-[50rem] lg:top-[8rem]
+    }
+    .coffee__sample__content.active{
+        @apply opacity-[1] top-[0rem] ease-in duration-[.3s]
+    }
+    .coffee__sample__content img{
+        @apply mx-[auto] lg:mx-[0] lg:w-[20rem]
+    }
+    .coffee__nav{
+        @apply flex flex-wrap justify-center mx-auto font-bold lg:text-[1.3rem] lg:font-semibold
+    }
+    .coffee__nav li{
+        @apply relative p-[.2rem]
+    }
+    .coffee__nav li:after{
         @apply content-[''] w-0 h-[3px] bg-lasalle block absolute bottom-0 left-0 origin-bottom-left ease-in duration-[.1s]
     }
-    .coffee__wrapper li.active:after{
-        @apply w-full transition-all
+    .coffee__nav li.active:after{
+        @apply w-full ease-in duration-[.5s]
     }
     .coffee__nav ul{
         @apply max-w-[25rem] flex gap-[2rem] mx-auto justify-center font-[600] text-[1.3em]
@@ -235,15 +223,8 @@
         @apply text-center font-semibold justify-center absolute top-[4rem] opacity-0 ease-in duration-[.5s]
         lg:flex lg:items-center  lg:static lg:mx-auto
     }
-    .coffee__sample__item{
-        @apply bg-semiblue 
-    }
-    .coffee__text{
-        @apply text-center p-[1rem]
-    }
-    .coffee__text h3{
-        @apply text-[1.2rem] font-[600] py-[1rem]
-    }
+    
+   
 
     
 
@@ -327,14 +308,44 @@
 
     /*---TALA---*/
     .tala{
-        @apply lg:bg-tala
+        @apply lg:bg-tala lg:p-[2rem]
     }
-    .tala__wrapper{
-        @apply lg:flex  lg:items-center justify-center 
-    }
-    .tala__wrapper img{
-        @apply hidden
-    }
+   .tala__wrapper-1{
+    @apply hidden lg:block
+   }
+   .tala__wrapper-2{
+    @apply hidden lg:block
+   }
+   .tala .container{
+    @apply bg-semiblue lg:flex lg:items-center
+   }
+   .tala__text-up{
+    @apply text-center 
+   }
+   .tala__text-up img{
+    @apply absolute lg:hidden
+   }
+   .tala__text-up h2{
+    @apply text-[1.8rem] pb-[1rem] pt-[4rem] font-semibold max-w-[75%] mx-[auto]
+   }
+   .tala__text-up p{
+    @apply max-w-[75%] mx-[auto] mb-[1rem]
+   }
+   .tala__text-down{
+    @apply text-center mb-[3.5rem]
+   }
+   .tala__text-down #sky{
+    @apply w-[10rem] mx-[auto] mb-[1rem] 
+   }
+   .tala__text-down p{
+    @apply mb-[1rem] max-w-[75%] mx-[auto]
+   }
+   .tala__text-down #star{
+    @apply w-[6rem] mx-[22rem] absolute lg:hidden
+   }
+   
+  
+
 
 
     /*---DOCS---*/
@@ -380,10 +391,6 @@
     .docs__all__item-2 p{
         @apply mb-[1rem] text-[.9rem] lg:max-w-[100%] 
     }
-
-
-    
-    
    
 
 
@@ -415,6 +422,77 @@
     .drop__wrapper{
         @apply lg:flex lg:gap-[3rem]
     }
+
+
+
+    /*---FOOTER---*/
+    .footer{
+        @apply border-t-[2px]
+    }
+    .footer__wrapper ul{
+        @apply flex gap-[1rem] text-[1.5rem] py-[1.5rem]
+    }
+    .footer__wrapper i{
+        @apply text-white
+    }
+    .footer__wrapper a{
+        @apply bg-black  lg:items-center px-[.5rem] rounded-full 
+    }
+    .footer__wrapper li{
+        @apply p-1
+    }
+    .footer__wrapper li:hover{
+        @apply bg-slate-400  rounded-full
+    }
+    .footer__text{ 
+        @apply lg:flex lg:gap-[3rem] lg:font-[400]
+    }
+    .footer__text span{
+        @apply hidden lg:block 
+    }
+    .footer__text p{
+        @apply mb-[1rem] text-[1rem] font-[semibold]
+    }
+    .footer__text p:hover{
+        @apply underline
+    }
+    .footer__credit p{
+        @apply text-gray-400 text-[.9rem] font-[semibold] mb-[10rem] lg:text-[1rem] lg:font-medium
+    }
+
+
+
+    /*---HOME---*/
+    .home{
+        @apply lg:px-[2rem] lg:border-b-[2px]
+    }
+    .home__wrapper{
+        @apply text-center pt-[6rem] 
+    }
+    .home__text{
+        @apply pb-[2rem] max-w-[90%] lg:max-w-[90%] mx-[auto] lg:mx-[auto]
+    }
+    .home__wrapper h2{
+        @apply text-[2rem] mb-[1.5rem] mt-[1.5rem] font-[600] lg:text-[4rem] 
+    }
+    .home__wrapper p{
+        @apply text-[1.5rem] mx-[2rem] mb-[2rem]
+    }
+    .home__wrapper a{
+        @apply font-semibold
+    }
+    .home__pink, .home__green, .home__blue, .home__dilaw{
+        @apply my-[2rem] items-center lg:grid lg:grid-cols-2 
+    }
+    .home__green{
+        @apply text-white
+    }
+    .home__offer p{
+        @apply text-[.8rem] lg:max-w-[38%] lg:mx-[auto] font-semibold lg:pt-[2rem] 
+    }
+
+
+
    
 
 
